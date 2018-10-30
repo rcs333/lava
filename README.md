@@ -3,6 +3,7 @@ LAVA analyzes and visualizes minor allele variants in longitudinal sequence data
 
 # Installation
 **Before you get started**
+
 Although we have a script that wil do the bulk of the installation for you - this script requries a few things. 
 
 1. Mac or Linux operating system. 
@@ -11,6 +12,7 @@ Although we have a script that wil do the bulk of the installation for you - thi
 4. If you are on a Mac operating system you need to have brew installed. Instructions for downloading and installing brew can be found at (https://brew.sh/)
 
 **Installation Instructions**
+
 To make installation easier (there are a lot of dependencies!), we've provided a short script to install most of these for you. 
 
 1. Ensure you have the requirements listed in the 'Before you get started section' 
