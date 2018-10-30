@@ -2,42 +2,27 @@
 LAVA analyzes and visualizes minor allele variants in longitudinal sequence data. LAVA takes a reference fasta (normally representing the first sample in your longitudinal analysis), fastq files (for every sample in your analysis), and a metadata sheet (providing information on what day or passage each sample was collected). Output will be displayed as an interactive graph in your web browser. LAVA will only work on Mac and Linux machines. 
 
 # Installation
-**Dependencies**
-The following dependencies are required to run LAVA: 
-1. Python
-2. BioPython, numpy, pandas, seaborn, bokeh modules for python which can be installed with `python -m pip install biopython` and `python -m pip install whateverpackage` 
-3. Picard (https://broadinstitute.github.io/picard/)
-4. GATK (https://software.broadinstitute.org/gatk/download/)
-5. VarScan (http://varscan.sourceforge.net/)
-6. ANNOVAR (http://www.openbioinformatics.org/annovar/annovar_download_form.php)
-7. mafft (https://mafft.cbrc.jp/alignment/software/) mafft needs to be on your path. Install with something like `brew install maaft` or `apt-get install maaft` and mafft will automatically be placed on your path. 
-8. bedtools (https://bedtools.readthedocs.io/en/latest/content/installation.html)
-9. SAMtools (http://www.htslib.org/download/)
-10. BWA (https://sourceforge.net/projects/bio-bwa/files/)
+**Before you get started**
+Although we have a script that wil do the bulk of the installation for you - this script requries a few things. 
+
+1. Mac or Linux operating system. 
+2. An internet connection. 
+3. Python - This should come installed by default on most Mac and Linux operating systems. However if for some reason it isn't you can download it from (https://www.python.org/)
+4. If you are on a Mac operating system you need to have brew installed. Instructions for downloading and installing brew can be found at (https://brew.sh/)
 
 **Installation Instructions**
 To make installation easier (there are a lot of dependencies!), we've provided a short script to install most of these for you. 
 
-1. Download this repository, either through git or download and unzip. 
-2. Download Anaconda (https://www.anaconda.com/download/#macos), and choose your system (Mac OS or Linux). Choose the python 2.7 version on the right, and follow the installation instructions.
-3. Open up terminal, and navigate to the folder where LAVA is in. This can be done by the command: `cd /path/to/LAVA` where /path/to/LAVA is the folder where LAVA resides. 
-4. You may find it helpful to put LAVA in your path. This will be extremely useful later on, so it's highly suggested. This can be done by the command: `echo 'export PATH=${PATH}:/path/to/LAVA' >> ~/.bash_profile`
-5. Still in terminal, type in `install.sh`.
+1. Ensure you have the requirements listed in the 'Before you get started section' 
+2. Download the LAVA repository. If you have git installed on the command line you can open up a terminal window and type `git clone https://github.com/michellejlin/lava.git`. Or if you're not comfortable doing that you can click the green button that says Clone or download and click on download zip. Then unzip the folder to wherever you want on your computer. 
 
-Many of the dependencies will now be installed for you! Unfortunately there are a few programs that require manual installation. 
+3. Open up a terminal window and change directories to the main lava folder. If you downloaded the zip file to your downloads folder this would look something like: `cd /Users/username/Downloads/lava-master/' 
 
-6. Download ANNOVAR (http://www.openbioinformatics.org/annovar/annovar_download_form.php). This program requires registration with a .edu email, or request for access.
-7. Download GATK (https://software.broadinstitute.org/gatk/download/). 
-8. Download VarScan (http://varscan.sourceforge.net/).
-9. Download Picard (https://broadinstitute.github.io/picard/)
-10. Open up lava.sh in a text editor and set the export statements in lines 2-5 to point to where you installed the executable for each of your dependencies (6-9). To get the full path where you downloaded them, navigate to the folder as shown above by the cd command, and type in `pwd` and you'll get a path you can copy and paste into LAVA.
-11. Download gff3ToGenePred. Linux (http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) and Mac (http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/). Navigate to the website and search for "gff3ToGenePred" and click on the link to download.
-12. Put the newly downloaded gff3ToGenePred file into the lava folder.
-13. In terminal, type in `chmod +x gff3ToGenePred`
+4. Run the install script by typing into the terminal window `python install.py`. The install script will work for a while and install anything you don't already have on your computer. When installation is complete you'll see this message `Installation Complete! The only remaining step is to download ANNOVAR and put all of the files into this folder! For instructions on how to do this see the README.`
 
-Now you're ready to do some longitudinal analysis of minor alleles! 
+5. Download ANNOVAR (http://www.openbioinformatics.org/annovar/annovar_download_form.php). This program requires registration with a .edu email, or request for access. Once you've recieved acsess to the annovar download, download and unzip it. Then copy and paste all the files inside the ANNOVAR folder into your main lava folder. 
 
-(For people who skipped the install script and downloaded their own dependencies, make sure to do step 11!)
+That's it! Now you're ready to do some longitudinal analysis of minor alleles! 
 
 # Input
 
